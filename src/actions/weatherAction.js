@@ -1,4 +1,5 @@
 
+
 export const GET_WEATHER = 'GET_WEATHER';
 export const PUT_WEATHER = 'PUT_WEATHER';
 export const ERROR_WEATHER = 'ERROR_WEATHER';
@@ -13,11 +14,13 @@ export const weatherErrorAction =() => ({
     payload: 'Error'
 });
 
-export const putWeatherAction =(data) => ({
+export const putWeatherAction = (data) => ({
     type: PUT_WEATHER,
     payload: data
 });
 export const getWeatherAction = (cityName) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+
     const baseUrl = 'https://api.openweathermap.org/data/2.5/weather?';
     const apiKey = '043e529d6bee20cb875b2b178f23dda8';
 
@@ -26,7 +29,6 @@ export const getWeatherAction = (cityName) => {
         fetch(`${baseUrl}q=${cityName}&appid=${apiKey}&units=metric`)
             .then(response => {
                 if (response.ok) {
-                    console.log(response);
                     return response.json();
                 }
                 else dispatch(weatherErrorAction());

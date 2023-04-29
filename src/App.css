@@ -1,14 +1,63 @@
 .App {
-  justify-content: center;
   display: flex;
 }
-.div-info, .div-data{
+.div-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  width: 30vw;
+  height: 40vw;
+  background-image: url('./img/images.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 30px;
+  border-radius: 8px;
+  border: blueviolet solid 5px;
+  color: white;
+}
+.div-data{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   width: 30vw;
-  height: 30vw;
   background-color: aqua;
   font-size: xx-large;
   margin: 30px;
   border-radius: 8px;
   border: blueviolet solid 5px;
 }
+.weather-report{
+  background-color: white;
+  font-size: medium;
+  border: blue solid 3px;
+  border-radius: 10px;
+  width: 75%;
+}
+button {
+  width: 70%;
+  height: 30px;
+  background-color: violet;
+  color: white;
+  font-size: medium;
+  margin: 25px;
+  border-radius: 10px;
+  border: white solid 3px;
+  cursor: pointer;
+}
+
+input {
+  margin-top: 25px;
+  background-color: white;
+  font-size: medium;
+  border: blue solid 3px;
+  border-radius: 10px;
+  width: 75%;
+  text-align: center;
+}
+.info-title {
+  margin: 10px;
+}
+

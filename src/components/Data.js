@@ -11,14 +11,18 @@ const Data = () => {
 
     return (
         <div className='div-data'>
-            <input type="text" onChange={(event )=>{
+            <input type="text"  placeholder='input city'
+                   onChange={(event )=>{
                 setCity(event.target.value)}} value={city}/>
             <button onClick={() => {
                 dispatch(getWeatherAction(city))
             }}>Get weather</button>
-            {
-                (weather) ? <Weather/> : <div>Input city</div>
-            }
+            <div className='weather-report'>
+                {
+                    (weather) ? <Weather/> : <div>...</div>
+                }
+            </div>
+
 
         </div>
                 );
